@@ -1,0 +1,28 @@
+{
+    "users": [
+        {
+            "id": "1",
+            "name": "Ayush",
+            "email": "ayush@gmail.com",
+            "password": "123123"
+        },
+        {
+            "id": "2",
+            "name": "Lhagwaa",
+            "email": "lhagwaa@gmail.com",
+            "password": "123123"
+        },
+        {
+            "id": "3",
+            "name": "Zanaa",
+            "email": "zanaa@gmail.com",
+            "password": "123123"
+        },
+        {
+            "id": "1",
+            "name": "Eegii",
+            "email": "eegii@gmail.com",
+            "password": "123123"
+        }
+    ]
+}
