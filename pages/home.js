@@ -4,11 +4,12 @@ import { UseMyContext } from "../components/Provider";
 import Navbar from "../components/Navbar";
 import Image from "next/image";
 
-const home = () => {
-  const [user, setUser] = useState(UseMyContext.user || {});
+const Home = () => {
+  const [user, setUser] = useState({});
 
   const router = useRouter();
   useEffect(() => {
+    setUser(UseMyContext.user);
     if (!user.name) router.push("/login");
   }, []);
 
@@ -27,4 +28,4 @@ const home = () => {
   );
 };
 
-export default home;
+export default Home;

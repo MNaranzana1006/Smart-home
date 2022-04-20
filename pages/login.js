@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import usersList from "../public/users.json";
 import { UseMyContext } from "../components/Provider";
 
-const login = () => {
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -68,4 +68,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;
