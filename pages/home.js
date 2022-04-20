@@ -5,11 +5,10 @@ import Navbar from "../components/Navbar";
 import Image from "next/image";
 
 const Home = () => {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(UseMyContext.user);
 
   const router = useRouter();
   useEffect(() => {
-    setUser(UseMyContext.user);
     if (!user.name) router.push("/login");
   }, []);
 
