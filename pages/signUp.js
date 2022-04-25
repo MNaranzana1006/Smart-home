@@ -19,14 +19,13 @@ const SignUp = () => {
         email: email,
         password: password,
       });
-      //   console.log(usersList);
-      //   await fetch("/api/hello", {
-      //     method: "POST",
-      //     body: JSON.stringify(usersList),
-      //     headers: {
-      //       "Content-Type": "application/JSON",
-      //     },
-      //   });
+      const res = await fetch("/api/hello", {
+        method: "POST",
+        body: JSON.stringify(usersList),
+        headers: { "Content-type": "application/json; charset=utf-8" },
+      });
+      const data = await res.json();
+      console.log(data);
       router.push("/login");
     } else {
       setError("Wrong password!");

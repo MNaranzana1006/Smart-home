@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
-import usersList from "../public/users.json";
+import usersList from "/users.json";
 import { UseMyContext } from "../components/Provider";
 import Link from "next/link";
 
