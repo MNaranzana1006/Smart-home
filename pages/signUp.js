@@ -2,13 +2,14 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import usersList from "../public/users.json";
 
-const signUp = () => {
+const SignUp = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [password2, setPassword2] = useState("");
   const [error, setError] = useState("");
   const router = useRouter();
+
   const checkEmailAndPassword = async (event) => {
     event.preventDefault();
     if (password === password2) {
@@ -18,14 +19,14 @@ const signUp = () => {
         email: email,
         password: password,
       });
-      console.log(usersList);
-      await fetch("/api/hello", {
-        method: "POST",
-        body: JSON.stringify(usersList),
-        headers: {
-          "Content-Type": "application/JSON",
-        },
-      });
+      //   console.log(usersList);
+      //   await fetch("/api/hello", {
+      //     method: "POST",
+      //     body: JSON.stringify(usersList),
+      //     headers: {
+      //       "Content-Type": "application/JSON",
+      //     },
+      //   });
       router.push("/login");
     } else {
       setError("Wrong password!");
@@ -104,4 +105,4 @@ const signUp = () => {
   );
 };
 
-export default signUp;
+export default SignUp;
