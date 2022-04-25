@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import usersList from "../public/users.json";
 import { UseMyContext } from "../components/Provider";
+import Link from "next/link";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -61,6 +62,14 @@ const Login = () => {
           >
             LOGIN
           </button>
+          <p className="text-md inline-block text-gray-200">
+            Not registered yet?
+          </p>
+          <Link href="/signUp">
+            <a className="text-md text-red-500 ml-4 hover:underline">
+              Create an account.
+            </a>
+          </Link>
           <p className="text-red-500">{error}</p>
         </div>
       </form>

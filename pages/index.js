@@ -8,5 +8,5 @@ export default function Home() {
     if (!user) router.push("/login");
     else router.push("/home");
   }, []);
-  return <div>hi</div>;
+  return <div></div>;
 }

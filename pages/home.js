@@ -17,11 +17,12 @@ const Home = () => {
   }
   const addNewRoom = () => {
     var obj = {
-      id: "10",
+      id: !user.rooms ? 1 : user.rooms[user.rooms.length - 1].id + 1,
       name: inputRoomName,
       imageUrl: "/livingRoom.jpg",
-      devices: [0],
+      devices: [],
     };
+    if (!user.rooms) user.rooms = [];
     user.rooms.push(obj);
     setInputRoomName("");
     closeModal();
